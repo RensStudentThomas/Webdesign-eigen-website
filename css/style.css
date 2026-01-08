@@ -260,7 +260,7 @@ footer {
     }
 
     body main {
-        background-image: url(../img/background-Computer.png), linear-gradient(to bottom, #3269B1, #222A55);
+        background-image: url(../img/background-computer.png), linear-gradient(to bottom, #3269B1, #222A55);
     }
     
     .hamburger-btn, .menu-toggle {
@@ -390,5 +390,6 @@ footer {
     .hamburger-menu a {
         font-size: 1.2rem;
     }
+
 
 }
