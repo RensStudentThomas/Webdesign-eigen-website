@@ -1,0 +1,394 @@
+html {
+    --color0: #fff;
+    --color1: #3669b2;
+    --color2: #7b217e;
+    --color3: #222a55;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--color0);
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../img/background-gsm.png), linear-gradient(to bottom, var(--color1), var(--color3));
+    font-family: bc-barell-1973, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body main {
+    background-image: url(../img/background-gsm.png), linear-gradient(to bottom, var(--color1), var(--color3));
+}
+
+
+body header img {
+    width: 10rem;
+}
+
+h1, h2, h3 {
+    font-family: futura-100, sans-serif;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* hamburger */
+header {
+    background-color: var(--color1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+}
+
+header img {
+    height: 4rem;
+}
+
+header nav {
+    height: 50px;
+}
+
+header label img {
+    height: 40px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.icon-hamburger {
+    display: inline;
+}
+.icon-close {
+    display: none;
+}
+
+.menu-toggle:checked + .hamburger-btn .icon-hamburger {
+    display: none;
+}
+.menu-toggle:checked + .hamburger-btn .icon-close {
+    display: inline;
+}
+
+.hamburger-btn {
+    position: relative;
+    z-index: 101;
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.menu-toggle:checked ~ .hamburger-menu {
+    right: 0;
+}
+
+.hamburger-menu a {
+    font-size: 2rem;
+}
+
+.nav-btn {
+    background-color: var(--color3);
+    padding: 0.2rem 1rem;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: var(--color0);
+}
+
+.btn, .download-btn {
+    text-decoration: none;
+    background-color: var(--color1);
+    padding: 0.6rem 1rem;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: var(--color0);
+}
+
+.btn:hover, .download-btn:hover{
+    background-color: var(--color2);
+}
+
+.btn:hover, .download-btn:hover, .nav-btn:hover {
+    text-decoration: none;
+}
+/**/
+
+section {
+    padding: 4rem 1rem 8rem 1rem;
+}
+
+section:first-child {
+    padding-top: 6rem;
+}
+
+.hero img, .container-sect img {
+    width: 100%;
+    max-width: 420px;
+    object-fit: contain;
+}
+
+.container-sect {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.hero img, .container-sect img {
+    display: none;
+}
+
+.info {
+    max-width: 400px;
+}
+
+.hero p {
+    margin-bottom: 1rem;
+}
+
+.hero .text-distance-btn {
+    margin-bottom: 2rem;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: 16px;
+}
+
+ul li {
+    margin: 1rem;
+    font-size: 16px;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    font-size: 40px;
+}
+
+h2 {
+    margin-bottom: 1.2rem;
+    font-size: 36px;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    font-size: 32px;
+}
+
+h4 {
+    margin-bottom: 10rem;
+    font-size: 30px;
+}
+
+.sect-last {
+    text-align: center;
+    padding-bottom: 15rem;
+}
+
+.sect-last div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.sect-last p {
+    padding-bottom: 1.5rem;
+}
+
+.sect-last div a img {
+    max-height: 50px;
+}
+
+footer {
+    background-color: var(--color3);
+    padding: 1rem;
+}
+
+.copyright {
+    font-size: small;
+    margin-bottom: 0;
+}
+
+.contact-background {
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sect-contact {
+    text-align: center;
+    max-width: 500px;
+    padding: 3rem 2rem;
+}
+
+.sect-contact h2 {
+    padding-bottom: 4rem;
+}
+
+@media (min-width: 600px) {
+
+    .about-background {
+        background-image: url(../img/background-com-about.png);
+    }
+
+    .contact-background {
+        background-image: url(../img/background-com-contact.png);
+    }
+
+    body main {
+        background-image: url(../img/background-Computer.png), linear-gradient(to bottom, #3269B1, #222A55);
+    }
+    
+    .hamburger-btn, .menu-toggle {
+        display: none;
+    }
+
+    .hamburger-menu {
+        position: static;
+        height: auto;
+        width: auto;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 2rem;
+        background: none;
+        transition: none;
+        background-color: var(--color2);
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+    }
+
+    .hamburger-menu a {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem 6rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    section:first-child {
+        padding-top: 2rem;
+    }
+
+    section:last-child {
+        padding-bottom: 10rem;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .hero img {
+        display: block;
+        width: 100%;
+        height: 420px;
+    }
+
+    .hero h1, .hero p, .hero a {
+        max-width: 600px;
+    }
+
+    .hero img, .container-sect img {
+        height: 500px;
+    }
+
+    p {
+        line-height: 1.6;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        padding-top: 5rem;
+        font-size: 28px;
+    }
+
+    .container-sect {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .container-sect img {
+        display: block;
+        width: 100%;
+    }
+
+    .sect-last div {
+        flex-direction: row;
+    }
+
+    .contact-background {
+        min-height: 100px;
+    }
+
+    .sect-contact {
+        padding: 4rem 2rem;
+    }
+
+    .sect-contact h2 {
+        padding-top: 6rem;
+    }
+
+    .sect-contact p {
+        padding-top: rem;
+    }
+}
+
+@media (min-width: 900px) {
+    header {
+        padding: 1rem 4rem;
+        position: relative;
+    }
+
+    .hamburger-menu a {
+        font-size: 1.2rem;
+    }
+
+}
